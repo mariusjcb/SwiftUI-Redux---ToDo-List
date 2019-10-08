@@ -18,4 +18,23 @@ extension Array where Element == TodoReducer.ItemType {
             .enumerated()
             .first(where: { $0.offset == offset })?.element
     }
+    
+    func replacingItem(at offset: IndexSet, with newElement: Element) -> Self {
+        guard let offset = offset.first else {
+            return self
+        }
+        
+        return replacingItem(at: Int(offset), with: newElement)
+    }
+    
+    func replacingItem(at offset: Int?, with newElement: Element) -> Self {
+        guard let offset = offset else {
+            return self
+        }
+        
+        var newState = self
+        newState[offset] = newElement
+        
+        return newState
+    }
 }

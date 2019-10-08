@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A12BBC0234CEDFE004A1E23 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A12BBBF234CEDFE004A1E23 /* AddItemView.swift */; };
+		7A12BBC2234CEE27004A1E23 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A12BBC1234CEE27004A1E23 /* TodoListView.swift */; };
+		7A12BBC4234CEE53004A1E23 /* MockTodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A12BBC3234CEE53004A1E23 /* MockTodoStore.swift */; };
 		7A7B00D2234CC9B200E6A9B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B00D1234CC9B200E6A9B6 /* AppDelegate.swift */; };
 		7A7B00D4234CC9B200E6A9B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B00D3234CC9B200E6A9B6 /* SceneDelegate.swift */; };
 		7A7B00D6234CC9B200E6A9B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B00D5234CC9B200E6A9B6 /* ContentView.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A12BBBF234CEDFE004A1E23 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		7A12BBC1234CEE27004A1E23 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		7A12BBC3234CEE53004A1E23 /* MockTodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTodoStore.swift; sourceTree = "<group>"; };
 		7A7B00CE234CC9B200E6A9B6 /* First Redux&Combine App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "First Redux&Combine App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A7B00D1234CC9B200E6A9B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A7B00D3234CC9B200E6A9B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +57,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A12BBBD234CEDDF004A1E23 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A7B00D5234CC9B200E6A9B6 /* ContentView.swift */,
+				7A12BBBF234CEDFE004A1E23 /* AddItemView.swift */,
+				7A12BBC1234CEE27004A1E23 /* TodoListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		7A7B00C5234CC9B200E6A9B6 = {
 			isa = PBXGroup;
 			children = (
@@ -75,7 +91,7 @@
 				7ADEFEF9234CCEE00090EDCE /* Stores */,
 				7A7B00D1234CC9B200E6A9B6 /* AppDelegate.swift */,
 				7A7B00D3234CC9B200E6A9B6 /* SceneDelegate.swift */,
-				7A7B00D5234CC9B200E6A9B6 /* ContentView.swift */,
+				7A12BBBD234CEDDF004A1E23 /* Views */,
 				7A7B00D7234CC9B300E6A9B6 /* Assets.xcassets */,
 				7A7B00DC234CC9B300E6A9B6 /* LaunchScreen.storyboard */,
 				7A7B00DF234CC9B300E6A9B6 /* Info.plist */,
@@ -88,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				7A7B00DA234CC9B300E6A9B6 /* Preview Assets.xcassets */,
+				7A12BBC3234CEE53004A1E23 /* MockTodoStore.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -223,14 +240,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A12BBC4234CEE53004A1E23 /* MockTodoStore.swift in Sources */,
 				7A7B00D2234CC9B200E6A9B6 /* AppDelegate.swift in Sources */,
 				7ADEFF01234CD04E0090EDCE /* Reducer.swift in Sources */,
+				7A12BBC2234CEE27004A1E23 /* TodoListView.swift in Sources */,
 				7ADEFEF6234CCACF0090EDCE /* TodoReducer.swift in Sources */,
 				7ADEFEFE234CD0010090EDCE /* AnyReducible.swift in Sources */,
 				7A7B00D4234CC9B200E6A9B6 /* SceneDelegate.swift in Sources */,
 				7ADEFF04234CD6CE0090EDCE /* ReduceStore.swift in Sources */,
 				7ADEFF06234CD9C60090EDCE /* TodoReducerExtensions.swift in Sources */,
 				7ADEFEFB234CCEF40090EDCE /* TodoStore.swift in Sources */,
+				7A12BBC0234CEDFE004A1E23 /* AddItemView.swift in Sources */,
 				7A7B00E8234CC9D800E6A9B6 /* TodoItem.swift in Sources */,
 				7A7B00D6234CC9B200E6A9B6 /* ContentView.swift in Sources */,
 			);

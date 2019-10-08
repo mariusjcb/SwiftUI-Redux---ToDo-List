@@ -12,6 +12,7 @@ enum TodoAction {
     case addTodo(String)
     case complete(IndexSet)
     case delete(IndexSet)
+    case deleteItem(TodoItem)
 }
 
 struct TodoReducer: Reducer {
@@ -29,9 +30,19 @@ struct TodoReducer: Reducer {
         case .complete(let offset):
             guard var item = newState.item(at: offset) else { return oldState }
             item.complete()
+            return newState.replacingItem(at: offset,
+                                          with: item)
         case .delete(let offset):
             guard var item = newState.item(at: offset) else { return oldState }
             item.delete()
+            return newState.replacingItem(at: offset,
+                                          with: item)
+        case .deleteItem(let item):
+            guard let offset = newState.firstIndex(where: { $0.id == item.id }) else { return oldState }
+            var item = item
+            item.delete()
+            return newState.replacingItem(at: offset,
+                                          with: item)
         }
         
         return newState

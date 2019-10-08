@@ -12,11 +12,11 @@ import Combine
 class TodoStore: ReduceStore {
     typealias ReducerType = TodoReducer
     
-    @Published internal var currentState: [ReducerType.ItemType]
-    var state: [ReducerType.ItemType] { return currentState }
+    @Published internal var currentState: ReducerType.StateType
+    var state: ReducerType.StateType { return currentState }
     var reducer: ReducerType
     
-    required init(_ initialState: ReducerType.StateType, reducer: ReducerType) {
+    required init(_ initialState: ReducerType.StateType = ReducerType.StateType(), reducer: ReducerType = ReducerType()) {
         self.reducer = reducer
         self.currentState = initialState
     }
