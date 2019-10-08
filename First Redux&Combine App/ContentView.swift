@@ -9,13 +9,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var store: TodoStore
+    
     var body: some View {
-        Text("Hello World")
+        Button(action: {
+            self.store.dispatch(action: TodoAction.addTodo("1"))
+        }, label: {
+            Text(String(store.state.count))
+        })
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(TodoStore([TodoItem(id: UUID(), name: "test")], reducer: TodoReducer()))
     }
 }

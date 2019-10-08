@@ -13,6 +13,13 @@
 		7A7B00D8234CC9B300E6A9B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A7B00D7234CC9B300E6A9B6 /* Assets.xcassets */; };
 		7A7B00DB234CC9B300E6A9B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A7B00DA234CC9B300E6A9B6 /* Preview Assets.xcassets */; };
 		7A7B00DE234CC9B300E6A9B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A7B00DC234CC9B300E6A9B6 /* LaunchScreen.storyboard */; };
+		7A7B00E8234CC9D800E6A9B6 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B00E7234CC9D800E6A9B6 /* TodoItem.swift */; };
+		7ADEFEF6234CCACF0090EDCE /* TodoReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADEFEF5234CCACF0090EDCE /* TodoReducer.swift */; };
+		7ADEFEFB234CCEF40090EDCE /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADEFEFA234CCEF40090EDCE /* TodoStore.swift */; };
+		7ADEFEFE234CD0010090EDCE /* AnyReducible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADEFEFD234CD0010090EDCE /* AnyReducible.swift */; };
+		7ADEFF01234CD04E0090EDCE /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADEFF00234CD04E0090EDCE /* Reducer.swift */; };
+		7ADEFF04234CD6CE0090EDCE /* ReduceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADEFF03234CD6CE0090EDCE /* ReduceStore.swift */; };
+		7ADEFF06234CD9C60090EDCE /* TodoReducerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADEFF05234CD9C60090EDCE /* TodoReducerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		7A7B00DA234CC9B300E6A9B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A7B00DD234CC9B300E6A9B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A7B00DF234CC9B300E6A9B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A7B00E7234CC9D800E6A9B6 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		7ADEFEF5234CCACF0090EDCE /* TodoReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoReducer.swift; sourceTree = "<group>"; };
+		7ADEFEFA234CCEF40090EDCE /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
+		7ADEFEFD234CD0010090EDCE /* AnyReducible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyReducible.swift; sourceTree = "<group>"; };
+		7ADEFF00234CD04E0090EDCE /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
+		7ADEFF03234CD6CE0090EDCE /* ReduceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduceStore.swift; sourceTree = "<group>"; };
+		7ADEFF05234CD9C60090EDCE /* TodoReducerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoReducerExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,9 @@
 		7A7B00D0234CC9B200E6A9B6 /* First Redux&Combine App */ = {
 			isa = PBXGroup;
 			children = (
+				7A7B00E9234CC9DE00E6A9B6 /* Models */,
+				7ADEFEF4234CCAB50090EDCE /* Reducers */,
+				7ADEFEF9234CCEE00090EDCE /* Stores */,
 				7A7B00D1234CC9B200E6A9B6 /* AppDelegate.swift */,
 				7A7B00D3234CC9B200E6A9B6 /* SceneDelegate.swift */,
 				7A7B00D5234CC9B200E6A9B6 /* ContentView.swift */,
@@ -73,6 +90,66 @@
 				7A7B00DA234CC9B300E6A9B6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7A7B00E9234CC9DE00E6A9B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7ADEFEFC234CCFF50090EDCE /* Base */,
+				7A7B00E7234CC9D800E6A9B6 /* TodoItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7ADEFEF4234CCAB50090EDCE /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				7ADEFEFF234CD0410090EDCE /* Base */,
+				7ADEFF07234CD9CD0090EDCE /* Extensions */,
+				7ADEFEF5234CCACF0090EDCE /* TodoReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		7ADEFEF9234CCEE00090EDCE /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				7ADEFF02234CD6C60090EDCE /* Base */,
+				7ADEFEFA234CCEF40090EDCE /* TodoStore.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		7ADEFEFC234CCFF50090EDCE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				7ADEFEFD234CD0010090EDCE /* AnyReducible.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		7ADEFEFF234CD0410090EDCE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				7ADEFF00234CD04E0090EDCE /* Reducer.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		7ADEFF02234CD6C60090EDCE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				7ADEFF03234CD6CE0090EDCE /* ReduceStore.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		7ADEFF07234CD9CD0090EDCE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7ADEFF05234CD9C60090EDCE /* TodoReducerExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +224,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A7B00D2234CC9B200E6A9B6 /* AppDelegate.swift in Sources */,
+				7ADEFF01234CD04E0090EDCE /* Reducer.swift in Sources */,
+				7ADEFEF6234CCACF0090EDCE /* TodoReducer.swift in Sources */,
+				7ADEFEFE234CD0010090EDCE /* AnyReducible.swift in Sources */,
 				7A7B00D4234CC9B200E6A9B6 /* SceneDelegate.swift in Sources */,
+				7ADEFF04234CD6CE0090EDCE /* ReduceStore.swift in Sources */,
+				7ADEFF06234CD9C60090EDCE /* TodoReducerExtensions.swift in Sources */,
+				7ADEFEFB234CCEF40090EDCE /* TodoStore.swift in Sources */,
+				7A7B00E8234CC9D800E6A9B6 /* TodoItem.swift in Sources */,
 				7A7B00D6234CC9B200E6A9B6 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
